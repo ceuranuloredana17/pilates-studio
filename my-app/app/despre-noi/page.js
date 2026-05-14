@@ -1,4 +1,4 @@
-export const metadata = {
+﻿export const metadata = {
   title: 'Despre Noi – Body Studio Pilates',
   description: 'Povestea și echipa Body Studio Pilates din Cluj-Napoca.',
 }
@@ -51,9 +51,9 @@ export default function DesprePage() {
   return (
     <>
       {/* HERO */}
-      <section className="bg-rose-50 py-20">
+      <section className="bg-cream py-20">
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <p className="text-rose-600 text-sm font-medium tracking-widest uppercase mb-3">Cine suntem</p>
+          <p className="text-caramel text-sm font-medium tracking-widest uppercase mb-3">Cine suntem</p>
           <h1 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-6">Despre Body Studio Pilates</h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Suntem un studio de Pilates dedicat din Cluj-Napoca, cu misiunea de a face această metodă de mișcare
@@ -66,7 +66,7 @@ export default function DesprePage() {
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="text-rose-600 text-sm font-medium tracking-widest uppercase mb-3">Povestea noastră</p>
+            <p className="text-caramel text-sm font-medium tracking-widest uppercase mb-3">Povestea noastră</p>
             <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Cum a început totul</h2>
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
@@ -85,12 +85,16 @@ export default function DesprePage() {
               </p>
             </div>
           </div>
-          <div className="rounded-2xl aspect-square overflow-hidden">
-            <img
-              src="/images/studio2.jpg"
-              alt="Echipamente Body Studio Pilates"
-              className="w-full h-full object-cover"
-            />
+          <div className="grid grid-cols-2 gap-3">
+            <div className="col-span-2 rounded-2xl overflow-hidden aspect-video">
+              <img src="/images/studio2.jpg" alt="Echipamente Body Studio Pilates" className="w-full h-full object-cover" />
+            </div>
+            <div className="rounded-2xl overflow-hidden aspect-square">
+              <img src="/images/studio3.jpg" alt="Sala Body Studio Pilates" className="w-full h-full object-cover" />
+            </div>
+            <div className="rounded-2xl overflow-hidden aspect-square">
+              <img src="/images/studio1.jpg" alt="Sala principală Body Studio" className="w-full h-full object-cover" />
+            </div>
           </div>
         </div>
       </section>
@@ -99,12 +103,12 @@ export default function DesprePage() {
       <section className="py-20 bg-stone-50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <p className="text-rose-600 text-sm font-medium tracking-widest uppercase mb-3">Ce ne ghidează</p>
+            <p className="text-caramel text-sm font-medium tracking-widest uppercase mb-3">Ce ne ghidează</p>
             <h2 className="text-3xl font-serif font-bold text-gray-900">Valorile Noastre</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((v) => (
-              <div key={v.title} className="bg-white rounded-2xl p-6 text-center shadow-sm border border-rose-100">
+              <div key={v.title} className="bg-white rounded-2xl p-6 text-center shadow-sm border border-beige">
                 <div className="text-4xl mb-4">{v.icon}</div>
                 <h3 className="font-serif font-bold text-gray-900 text-lg mb-2">{v.title}</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">{v.desc}</p>
@@ -115,9 +119,9 @@ export default function DesprePage() {
       </section>
 
       {/* AUDIO – Mesaj de bun venit */}
-      <section className="py-16 bg-rose-50">
+      <section className="py-16 bg-cream">
         <div className="max-w-3xl mx-auto px-4 text-center">
-          <p className="text-rose-600 text-sm font-medium tracking-widest uppercase mb-3">Ascultă-ne</p>
+          <p className="text-caramel text-sm font-medium tracking-widest uppercase mb-3">Ascultă-ne</p>
           <h2 className="text-2xl font-serif font-bold text-gray-900 mb-4">Mesaj de Bun Venit</h2>
           <p className="text-gray-600 mb-8">
             Ana Ionescu vă invită personal să descoperiți lumea Pilates-ului la Body Studio.
@@ -139,22 +143,23 @@ export default function DesprePage() {
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <p className="text-rose-600 text-sm font-medium tracking-widest uppercase mb-3">Oamenii din spatele studioului</p>
+            <p className="text-caramel text-sm font-medium tracking-widest uppercase mb-3">Oamenii din spatele studioului</p>
             <h2 className="text-3xl font-serif font-bold text-gray-900">Echipa Noastră</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {team.map((member) => (
               <div key={member.name} className="text-center">
-                <div className="w-32 h-32 rounded-full bg-rose-100 mx-auto mb-4 flex items-center justify-center overflow-hidden">
-                  {/* Înlocuiți cu <img src={`/images/${member.name.toLowerCase().replace(' ', '-')}.jpg`} ... /> */}
-                  <svg className="w-16 h-16 text-rose-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                  </svg>
+                <div className="w-36 h-36 rounded-full mx-auto mb-4 overflow-hidden border-4 border-beige shadow-md">
+                  <img
+                    src={`/images/${member.name.toLowerCase().replace(' ', '')}.jpg`}
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h3 className="font-serif font-bold text-gray-900 text-xl mb-1">{member.name}</h3>
-                <p className="text-rose-600 text-sm font-medium mb-3">{member.role}</p>
+                <p className="text-caramel text-sm font-medium mb-3">{member.role}</p>
                 <p className="text-gray-600 text-sm leading-relaxed mb-3">{member.bio}</p>
-                <span className="inline-block text-xs bg-rose-50 text-rose-700 px-3 py-1 rounded-full">
+                <span className="inline-block text-xs bg-cream text-bark px-3 py-1 rounded-full">
                   {member.speciality}
                 </span>
               </div>
@@ -169,7 +174,7 @@ export default function DesprePage() {
           <h2 className="text-2xl font-serif font-bold text-gray-900 mb-8">Certificări & Acreditări</h2>
           <div className="flex flex-wrap justify-center gap-6">
             {['STOTT PILATES®', 'BASI Pilates', 'Pilates Alliance Australasia', 'Balanced Body', 'Polestar Pilates'].map((cert) => (
-              <div key={cert} className="bg-white border border-rose-100 rounded-xl px-6 py-3 text-sm font-medium text-gray-700 shadow-sm">
+              <div key={cert} className="bg-white border border-beige rounded-xl px-6 py-3 text-sm font-medium text-gray-700 shadow-sm">
                 ✓ {cert}
               </div>
             ))}

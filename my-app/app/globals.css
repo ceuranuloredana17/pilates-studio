@@ -1,13 +1,19 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #1a1a1a;
+@theme {
+  /* Paleta warm beige–brown */
+  --color-cream: #fdf8f2;
+  --color-beige: #f5e8d8;
+  --color-sand: #e3cdb4;
+  --color-mink: #c4a07a;
+  --color-caramel: #967040;
+  --color-bark: #6e4e28;
+  --color-espresso: #422c10;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: #fdf8f2;
+  color: #2c1a0e;
   font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 

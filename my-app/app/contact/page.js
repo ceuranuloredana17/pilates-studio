@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState } from 'react'
 
@@ -24,9 +24,9 @@ export default function ContactPage() {
   return (
     <>
       {/* HERO */}
-      <section className="bg-rose-50 py-20">
+      <section className="bg-cream py-20">
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <p className="text-rose-600 text-sm font-medium tracking-widest uppercase mb-3">Suntem aici pentru tine</p>
+          <p className="text-caramel text-sm font-medium tracking-widest uppercase mb-3">Suntem aici pentru tine</p>
           <h1 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-6">Contact & Feedback</h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Ai o întrebare, dorești să rezervi o ședință sau vrei să ne transmiți un feedback?
@@ -43,8 +43,8 @@ export default function ContactPage() {
 
             <div className="space-y-6">
               <div className="flex gap-4">
-                <div className="w-10 h-10 bg-rose-100 rounded-full flex items-center justify-center shrink-0">
-                  <svg className="w-5 h-5 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-10 h-10 bg-beige rounded-full flex items-center justify-center shrink-0">
+                  <svg className="w-5 h-5 text-caramel" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                   </svg>
@@ -57,34 +57,34 @@ export default function ContactPage() {
               </div>
 
               <div className="flex gap-4">
-                <div className="w-10 h-10 bg-rose-100 rounded-full flex items-center justify-center shrink-0">
-                  <svg className="w-5 h-5 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-10 h-10 bg-beige rounded-full flex items-center justify-center shrink-0">
+                  <svg className="w-5 h-5 text-caramel" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
                   </svg>
                 </div>
                 <div>
                   <p className="font-semibold text-gray-800 mb-1">Telefon</p>
-                  <a href="tel:+40712345678" className="text-rose-700 hover:text-rose-900 text-sm">+40 712 345 678</a>
+                  <a href="tel:+40712345678" className="text-bark hover:text-espresso text-sm">+40 712 345 678</a>
                 </div>
               </div>
 
               <div className="flex gap-4">
-                <div className="w-10 h-10 bg-rose-100 rounded-full flex items-center justify-center shrink-0">
-                  <svg className="w-5 h-5 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-10 h-10 bg-beige rounded-full flex items-center justify-center shrink-0">
+                  <svg className="w-5 h-5 text-caramel" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                   </svg>
                 </div>
                 <div>
                   <p className="font-semibold text-gray-800 mb-1">Email</p>
-                  <a href="mailto:contact@bodystudiopilates.ro" className="text-rose-700 hover:text-rose-900 text-sm">
+                  <a href="mailto:contact@bodystudiopilates.ro" className="text-bark hover:text-espresso text-sm">
                     contact@bodystudiopilates.ro
                   </a>
                 </div>
               </div>
 
               <div className="flex gap-4">
-                <div className="w-10 h-10 bg-rose-100 rounded-full flex items-center justify-center shrink-0">
-                  <svg className="w-5 h-5 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-10 h-10 bg-beige rounded-full flex items-center justify-center shrink-0">
+                  <svg className="w-5 h-5 text-caramel" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                   </svg>
                 </div>
@@ -145,7 +145,7 @@ export default function ContactPage() {
                 </p>
                 <button
                   onClick={() => { setSubmitted(false); setForm({ nume: '', email: '', telefon: '', subiect: '', mesaj: '' }) }}
-                  className="mt-6 text-rose-700 text-sm font-medium hover:text-rose-900"
+                  className="mt-6 text-bark text-sm font-medium hover:text-espresso"
                 >
                   Trimite alt mesaj
                 </button>
@@ -155,7 +155,7 @@ export default function ContactPage() {
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Nume complet <span className="text-rose-500">*</span>
+                      Nume complet <span className="text-caramel">*</span>
                     </label>
                     <input
                       type="text"
@@ -164,12 +164,12 @@ export default function ContactPage() {
                       onChange={handleChange}
                       required
                       placeholder="Popescu Maria"
-                      className="w-full border border-stone-200 rounded-xl px-4 py-3 text-sm outline-none focus:border-rose-400 focus:ring-1 focus:ring-rose-400 transition"
+                      className="w-full border border-stone-200 rounded-xl px-4 py-3 text-sm outline-none focus:border-mink focus:ring-1 focus:ring-mink transition"
                     />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Email <span className="text-rose-500">*</span>
+                      Email <span className="text-caramel">*</span>
                     </label>
                     <input
                       type="email"
@@ -178,7 +178,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       required
                       placeholder="maria@email.ro"
-                      className="w-full border border-stone-200 rounded-xl px-4 py-3 text-sm outline-none focus:border-rose-400 focus:ring-1 focus:ring-rose-400 transition"
+                      className="w-full border border-stone-200 rounded-xl px-4 py-3 text-sm outline-none focus:border-mink focus:ring-1 focus:ring-mink transition"
                     />
                   </div>
                 </div>
@@ -192,7 +192,7 @@ export default function ContactPage() {
                       value={form.telefon}
                       onChange={handleChange}
                       placeholder="+40 7xx xxx xxx"
-                      className="w-full border border-stone-200 rounded-xl px-4 py-3 text-sm outline-none focus:border-rose-400 focus:ring-1 focus:ring-rose-400 transition"
+                      className="w-full border border-stone-200 rounded-xl px-4 py-3 text-sm outline-none focus:border-mink focus:ring-1 focus:ring-mink transition"
                     />
                   </div>
                   <div>
@@ -201,7 +201,7 @@ export default function ContactPage() {
                       name="subiect"
                       value={form.subiect}
                       onChange={handleChange}
-                      className="w-full border border-stone-200 rounded-xl px-4 py-3 text-sm outline-none focus:border-rose-400 focus:ring-1 focus:ring-rose-400 transition bg-white"
+                      className="w-full border border-stone-200 rounded-xl px-4 py-3 text-sm outline-none focus:border-mink focus:ring-1 focus:ring-mink transition bg-white"
                     >
                       <option value="">Selectează...</option>
                       <option value="rezervare">Rezervare ședință</option>
@@ -215,7 +215,7 @@ export default function ContactPage() {
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Mesaj <span className="text-rose-500">*</span>
+                    Mesaj <span className="text-caramel">*</span>
                   </label>
                   <textarea
                     name="mesaj"
@@ -224,13 +224,13 @@ export default function ContactPage() {
                     required
                     rows={5}
                     placeholder="Scrie mesajul tău aici..."
-                    className="w-full border border-stone-200 rounded-xl px-4 py-3 text-sm outline-none focus:border-rose-400 focus:ring-1 focus:ring-rose-400 transition resize-none"
+                    className="w-full border border-stone-200 rounded-xl px-4 py-3 text-sm outline-none focus:border-mink focus:ring-1 focus:ring-mink transition resize-none"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-rose-700 text-white py-3 rounded-xl font-medium hover:bg-rose-800 transition-colors"
+                  className="w-full bg-bark text-white py-3 rounded-xl font-medium hover:bg-espresso transition-colors"
                 >
                   Trimite Mesajul
                 </button>

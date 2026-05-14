@@ -1,38 +1,7 @@
-export const metadata = {
+﻿export const metadata = {
   title: 'Galerie – Body Studio Pilates',
   description: 'Fotografii și videoclipuri din studioul Body Studio Pilates din Cluj-Napoca.',
 }
-
-const photoCategories = [
-  {
-    category: 'Studioul nostru',
-    photos: [
-      { label: 'Sala principală', color: 'bg-rose-100' },
-      { label: 'Zona Reformer', color: 'bg-rose-200' },
-      { label: 'Recepție', color: 'bg-stone-100' },
-      { label: 'Vestiare', color: 'bg-stone-200' },
-    ],
-  },
-  {
-    category: 'Clase în desfășurare',
-    photos: [
-      { label: 'Mat Pilates', color: 'bg-rose-100' },
-      { label: 'Reformer Pilates', color: 'bg-rose-200' },
-      { label: 'Pilates Prenatal', color: 'bg-stone-100' },
-      { label: 'Pilates Seniori', color: 'bg-stone-200' },
-      { label: 'Clasă de grup', color: 'bg-rose-100' },
-      { label: 'Ședință individuală', color: 'bg-rose-200' },
-    ],
-  },
-  {
-    category: 'Evenimente și workshop-uri',
-    photos: [
-      { label: 'Workshop intensiv', color: 'bg-stone-100' },
-      { label: 'Open day 2025', color: 'bg-rose-100' },
-      { label: 'Retreat Pilates', color: 'bg-rose-200' },
-    ],
-  },
-]
 
 const videos = [
   {
@@ -51,9 +20,9 @@ export default function GaleriePage() {
   return (
     <>
       {/* HERO */}
-      <section className="bg-rose-50 py-20">
+      <section className="bg-cream py-20">
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <p className="text-rose-600 text-sm font-medium tracking-widest uppercase mb-3">Vizitează-ne</p>
+          <p className="text-caramel text-sm font-medium tracking-widest uppercase mb-3">Vizitează-ne</p>
           <h1 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-6">Galerie</h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Aruncă o privire în interiorul studioului nostru și descoperă atmosfera în care ne desfășurăm clasele.
@@ -61,53 +30,100 @@ export default function GaleriePage() {
         </div>
       </section>
 
-      {/* FOTOGRAFII */}
+      {/* STUDIOUL NOSTRU */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
-          {photoCategories.map((cat) => (
-            <div key={cat.category} className="mb-16">
-              <h2 className="text-2xl font-serif font-bold text-gray-900 mb-6 pb-2 border-b border-rose-100">
-                {cat.category}
-              </h2>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                {cat.photos.map((photo, idx) => (
-                  <div
-                    key={idx}
-                    className={`${photo.color} rounded-xl aspect-square flex flex-col items-center justify-center group cursor-pointer hover:opacity-90 transition-opacity overflow-hidden relative`}
-                  >
-                    {/* Înlocuiți cu imaginea reală: <img src="/images/..." alt={photo.label} className="w-full h-full object-cover" /> */}
-                    <svg className="w-10 h-10 text-rose-300 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                    <p className="text-xs text-rose-400 font-medium px-2 text-center">{photo.label}</p>
-                  </div>
-                ))}
-              </div>
+          <h2 className="text-2xl font-serif font-bold text-gray-900 mb-6 pb-2 border-b border-beige">
+            Studioul nostru
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-4">
+            {/* Poza mare – hero recepție */}
+            <div className="col-span-2 md:col-span-2 rounded-2xl overflow-hidden aspect-video">
+              <img src="/images/hero.jpg" alt="Recepție Body Studio" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
             </div>
-          ))}
+            {/* Studio 3 */}
+            <div className="rounded-2xl overflow-hidden aspect-video">
+              <img src="/images/studio3.jpg" alt="Studio Body Studio" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            </div>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="rounded-2xl overflow-hidden aspect-square">
+              <img src="/images/studio1.jpg" alt="Sala principală" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div className="rounded-2xl overflow-hidden aspect-square">
+              <img src="/images/studio2.jpg" alt="Echipamente studio" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div className="rounded-2xl overflow-hidden aspect-square">
+              <img src="/images/vestiare.jpg" alt="Vestiare" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            </div>
+          </div>
+        </div>
+      </section>
 
-          <div className="bg-rose-50 rounded-2xl p-8 text-center">
-            <h3 className="font-serif font-bold text-gray-900 text-xl mb-3">📸 Fotografiile dvs. vor apărea aici</h3>
-            <p className="text-gray-600 text-sm mb-4">
-              Adăugați fotografiile studioului în directorul <code className="bg-white px-2 py-1 rounded">/public/images/</code> și înlocuiți placeholder-ele de mai sus.
-            </p>
-            <p className="text-xs text-gray-400">
-              Format recomandat: JPG sau WebP, minim 800×800px, maxim 2MB per fotografie.
-            </p>
+      {/* VESTIAR */}
+      <section className="py-8 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-2xl font-serif font-bold text-gray-900 mb-6 pb-2 border-b border-beige">
+            Vestiare & Facilități
+          </h2>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="rounded-2xl overflow-hidden aspect-video">
+              <img src="/images/lockerroom.jpg" alt="Locker room" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div className="rounded-2xl overflow-hidden aspect-video">
+              <img src="/images/lockerrom2.jpg" alt="Locker room 2" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CLASE ÎN AER LIBER */}
+      <section className="py-20 bg-stone-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-2xl font-serif font-bold text-gray-900 mb-6 pb-2 border-b border-beige">
+            Clase în Aer Liber
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {['outsideactivity1.jpg', 'outsideactivity2.jpg', 'outsideactivity3.jpg', 'outsideactivity4.jpg'].map((img, i) => (
+              <div key={i} className="rounded-2xl overflow-hidden aspect-square">
+                <img
+                  src={`/images/${img}`}
+                  alt={`Activitate în aer liber ${i + 1}`}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SAUNĂ */}
+      <section className="py-8 pb-20 bg-stone-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-2xl font-serif font-bold text-gray-900 mb-6 pb-2 border-b border-beige">
+            Saună & Relaxare
+          </h2>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="rounded-2xl overflow-hidden aspect-video">
+              <img src="/images/sauna.jpg" alt="Sauna" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            </div>
+            <div className="rounded-2xl overflow-hidden aspect-video">
+              <img src="/images/sauna2.jpg" alt="Sauna interior" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            </div>
           </div>
         </div>
       </section>
 
       {/* VIDEO */}
-      <section className="py-20 bg-stone-50">
+      <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <p className="text-rose-600 text-sm font-medium tracking-widest uppercase mb-3">Video</p>
+            <p className="text-caramel text-sm font-medium tracking-widest uppercase mb-3">Video</p>
             <h2 className="text-3xl font-serif font-bold text-gray-900">Videoclipuri</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             {videos.map((video) => (
-              <div key={video.title} className="bg-white rounded-2xl overflow-hidden shadow-sm">
+              <div key={video.title} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-stone-100">
                 <div className="aspect-video">
                   <iframe
                     src={video.embedUrl}
@@ -127,8 +143,8 @@ export default function GaleriePage() {
         </div>
       </section>
 
-      {/* INSTAGRAM FEED */}
-      <section className="py-16 bg-white">
+      {/* INSTAGRAM */}
+      <section className="py-16 bg-cream">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-2xl font-serif font-bold text-gray-900 mb-4">Urmărește-ne pe Instagram</h2>
           <p className="text-gray-600 mb-8">

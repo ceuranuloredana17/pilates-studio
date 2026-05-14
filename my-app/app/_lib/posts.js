@@ -1,10 +1,11 @@
-const posts = [
+﻿const posts = [
   {
     slug: 'beneficiile-pilates-coloana',
     title: 'Beneficiile Pilates pentru sănătatea coloanei vertebrale',
     date: '5 Mai 2026',
     category: 'Sănătate',
     author: 'Ana Ionescu',
+    image: '/images/beneficiicoloanavertebrala.jpg',
     excerpt:
       'Coloana vertebrală este pilonul central al corpului nostru. Aflați cum Pilates poate reduce durerile de spate și îmbunătăți postura chiar și după câteva săptămâni de practică regulată.',
     content: `
@@ -46,6 +47,7 @@ Dacă suferiți de dureri de spate cronice sau ați primit un diagnostic medical
     date: '20 Aprilie 2026',
     category: 'Ghiduri',
     author: 'Maria Popa',
+    image: '/images/beginnerpilates.jpg',
     excerpt:
       'Ești nou în lumea Pilates și nu știi de unde să începi? Acest ghid îți explică tot ce trebuie să știi înainte de prima ședință: ce să porți, ce să aduci și la ce să te aștepți.',
     content: `
@@ -104,6 +106,7 @@ Suntem nerăbdători să te întâmpinăm la Body Studio Pilates! Programează o
     date: '1 Aprilie 2026',
     category: 'Informații',
     author: 'Ana Ionescu',
+    image: '/images/matpilatesc.jpg',
     excerpt:
       'Confuz între Mat Pilates și Reformer Pilates? Îți explicăm diferențele esențiale, avantajele fiecărui tip și cum să alegi varianta potrivită pentru tine.',
     content: `
@@ -164,6 +167,7 @@ La Body Studio Pilates oferim ambele tipuri de clase, cu instructori certificaț
     date: '15 Martie 2026',
     category: 'Exerciții',
     author: 'Maria Popa',
+    image: '/images/homepilates.jpg',
     excerpt:
       'Nu ai timp să vii la studio în fiecare zi? Iată 5 exerciții clasice de Pilates pe care le poți practica acasă, cu o saltea și 20 de minute libere.',
     content: `

@@ -1,8 +1,8 @@
-import Link from 'next/link'
+﻿import Link from 'next/link'
 
 export const metadata = {
-  title: 'Clase – Body Studio Pilates',
-  description: 'Descoperă toate tipurile de clase de Pilates oferite la Body Studio: Mat, Reformer, Prenatal și Seniori.',
+  title: 'Clase & Servicii – Body Studio Pilates',
+  description: 'Mat Pilates, Reformer Pilates, clase în aer liber și saună la Body Studio Cluj-Napoca.',
 }
 
 const classes = [
@@ -15,8 +15,9 @@ const classes = [
     participants: 'max. 10',
     price: '50 RON / ședință',
     abonament: '180 RON / 4 ședințe',
+    image: '/images/studio1.jpg',
     description:
-      'Mat Pilates este forma originală a metodei, practicată pe saltea cu greutatea propriului corp. Clasele noastre de Mat Pilates acoperă toate nivelurile, de la exerciții fundamentale pentru începători până la secvențe avansate care necesită forță, flexibilitate și echilibru.',
+      'Mat Pilates este forma originală a metodei, practicată pe saltea cu greutatea propriului corp. Clasele noastre acoperă toate nivelurile, de la exerciții fundamentale pentru începători până la secvențe avansate care necesită forță, flexibilitate și echilibru.',
     benefits: [
       'Tonifiere abdomen și zona centrală (core)',
       'Îmbunătățirea posturii și aliniamentului',
@@ -42,8 +43,9 @@ const classes = [
     participants: 'max. 6',
     price: '90 RON / ședință',
     abonament: '320 RON / 4 ședințe',
+    image: '/images/studio2.jpg',
     description:
-      'Reformer Pilates folosește aparatul iconic cu platformă mobilă și arcuri de rezistență reglabile. Versatilitatea reformer-ului permite sute de exerciții care pot fi adaptate atât pentru recuperare, cât și pentru antrenament intensiv. Clasele au maximum 6 participanți pentru atenție individualizată.',
+      'Reformer Pilates folosește aparatul iconic cu platformă mobilă și arcuri de rezistență reglabile. Versatilitatea reformer-ului permite sute de exerciții adaptate atât pentru recuperare, cât și pentru antrenament intensiv. Clasele au maximum 6 participanți pentru atenție individualizată.',
     benefits: [
       'Întărire musculară completă, fără impact articular',
       'Ideal pentru recuperare post-accidentare',
@@ -59,172 +61,276 @@ const classes = [
       { day: 'Sâmbătă', time: '11:30 – 12:30' },
     ],
   },
-  {
-    id: 'prenatal',
-    title: 'Pilates Prenatal',
-    icon: '🤰',
-    level: 'Gravide (trimestrul I–III)',
-    duration: '50 min',
-    participants: 'max. 6',
-    price: '70 RON / ședință',
-    abonament: '240 RON / 4 ședințe',
-    description:
-      'Programul nostru de Pilates Prenatal este conceput special pentru femeile gravide și susținut de o instructoare cu specializare în kinetoterapie. Exercițiile sunt adaptate siguranței mamei și bebelușului, cu focus pe pregătirea corpului pentru naștere și recuperarea postnatală.',
-    benefits: [
-      'Ameliorarea durerilor de spate specifice sarcinii',
-      'Întărirea planșeului pelvin',
-      'Reducerea edemelor la picioare',
-      'Pregătire pentru naștere (tehnici de respirație)',
-      'Conexiune conștientă cu bebelușul',
-    ],
-    schedule: [
-      { day: 'Luni', time: '11:00 – 12:00' },
-      { day: 'Joi', time: '11:00 – 12:00' },
-      { day: 'Sâmbătă', time: '09:00 – 10:00' },
-    ],
-  },
-  {
-    id: 'seniori',
-    title: 'Pilates pentru Seniori',
-    icon: '🌿',
-    level: '60+ ani',
-    duration: '50 min',
-    participants: 'max. 8',
-    price: '45 RON / ședință',
-    abonament: '160 RON / 4 ședințe',
-    description:
-      'Clasele noastre pentru seniori sunt concepute pentru persoanele de 60+ ani care doresc să rămână active, să-și mențină mobilitatea și să prevină căderile. Exercițiile sunt blânde, executate în ritm lent, cu accent pe echilibru, coordonare și flexibilitate.',
-    benefits: [
-      'Îmbunătățirea echilibrului și prevenirea căderilor',
-      'Menținerea mobilității articulațiilor',
-      'Creșterea densității osoase',
-      'Stimularea circulației sanguine',
-      'Socializare și stare de bine generală',
-    ],
-    schedule: [
-      { day: 'Marți', time: '10:30 – 11:20' },
-      { day: 'Joi', time: '10:30 – 11:20' },
-      { day: 'Sâmbătă', time: '09:00 – 09:50' },
-    ],
-  },
 ]
 
 export default function ClasePage() {
   return (
     <>
       {/* HERO */}
-      <section className="bg-rose-50 py-20">
+      <section className="bg-cream py-20">
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <p className="text-rose-600 text-sm font-medium tracking-widest uppercase mb-3">Ce oferim</p>
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-6">Clasele Noastre</h1>
+          <p className="text-caramel text-sm font-medium tracking-widest uppercase mb-3">Ce oferim</p>
+          <h1 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-6">Clase & Servicii</h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            4 tipuri de clase adaptate pentru fiecare nevoie și nivel. Alege programul potrivit pentru tine
-            și fă primul pas spre o viață mai echilibrată.
+            Pilates în studio, activități în aer liber și saună — tot ce ai nevoie pentru corp și minte, într-un singur loc.
           </p>
         </div>
       </section>
 
-      {/* CLASE */}
+      {/* CLASE PILATES */}
       <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4 space-y-16">
-          {classes.map((cls, idx) => (
-            <div
-              key={cls.id}
-              id={cls.id}
-              className={`grid md:grid-cols-2 gap-10 items-start ${idx % 2 === 1 ? 'md:flex-row-reverse' : ''}`}
-            >
-              <div className={idx % 2 === 1 ? 'md:order-2' : ''}>
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="text-4xl">{cls.icon}</span>
-                  <div>
-                    <h2 className="text-2xl font-serif font-bold text-gray-900">{cls.title}</h2>
-                    <span className="text-sm text-rose-600 font-medium">{cls.level}</span>
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-2xl font-serif font-bold text-gray-900 mb-12 pb-3 border-b border-beige">
+            🧘 Clase de Pilates
+          </h2>
+          <div className="space-y-16">
+            {classes.map((cls, idx) => (
+              <div
+                key={cls.id}
+                id={cls.id}
+                className="grid md:grid-cols-2 gap-10 items-start"
+              >
+                <div className={idx % 2 === 1 ? 'md:order-2' : ''}>
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="text-4xl">{cls.icon}</span>
+                    <div>
+                      <h3 className="text-2xl font-serif font-bold text-gray-900">{cls.title}</h3>
+                      <span className="text-sm text-caramel font-medium">{cls.level}</span>
+                    </div>
+                  </div>
+                  <p className="text-gray-600 leading-relaxed mb-6">{cls.description}</p>
+
+                  <div className="flex flex-wrap gap-4 mb-6">
+                    <div className="bg-stone-50 rounded-xl px-4 py-2 text-center">
+                      <p className="text-xs text-gray-500">Durată</p>
+                      <p className="font-semibold text-gray-800">{cls.duration}</p>
+                    </div>
+                    <div className="bg-stone-50 rounded-xl px-4 py-2 text-center">
+                      <p className="text-xs text-gray-500">Grup</p>
+                      <p className="font-semibold text-gray-800">{cls.participants}</p>
+                    </div>
+                    <div className="bg-cream rounded-xl px-4 py-2 text-center">
+                      <p className="text-xs text-caramel">Preț per ședință</p>
+                      <p className="font-bold text-bark">{cls.price}</p>
+                    </div>
+                    <div className="bg-cream rounded-xl px-4 py-2 text-center">
+                      <p className="text-xs text-caramel">Abonament</p>
+                      <p className="font-bold text-bark">{cls.abonament}</p>
+                    </div>
+                  </div>
+
+                  <h4 className="font-semibold text-gray-800 mb-3">Beneficii:</h4>
+                  <ul className="space-y-2">
+                    {cls.benefits.map((b) => (
+                      <li key={b} className="flex items-start gap-2 text-sm text-gray-600">
+                        <svg className="w-4 h-4 text-caramel mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                        </svg>
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <Link
+                    href="/contact"
+                    className="mt-6 inline-block bg-bark text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-espresso transition-colors"
+                  >
+                    Rezervă o ședință
+                  </Link>
+                </div>
+
+                <div className={idx % 2 === 1 ? 'md:order-1' : ''}>
+                  <div className="bg-stone-50 rounded-2xl p-6 mb-4">
+                    <h4 className="font-serif font-bold text-gray-900 mb-4">📅 Orar Săptămânal</h4>
+                    <div className="space-y-2">
+                      {cls.schedule.map((s, i) => (
+                        <div key={i} className="flex justify-between items-center py-2 border-b border-stone-200 last:border-0">
+                          <span className="font-medium text-gray-700 text-sm">{s.day}</span>
+                          <span className="text-bark font-semibold text-sm">{s.time}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <p className="text-xs text-gray-400 mt-4">* Orarul poate varia. Verificați disponibilitatea la contact.</p>
+                  </div>
+
+                  <div className="rounded-2xl overflow-hidden aspect-video">
+                    {cls.image ? (
+                      <img src={cls.image} alt={cls.title} className="w-full h-full object-cover" />
+                    ) : (
+                      <div className="w-full h-full bg-cream flex items-center justify-center">
+                        <span className="text-mink text-sm">Fotografie {cls.title}</span>
+                      </div>
+                    )}
                   </div>
                 </div>
-                <p className="text-gray-600 leading-relaxed mb-6">{cls.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-                <div className="flex flex-wrap gap-4 mb-6">
-                  <div className="bg-stone-50 rounded-xl px-4 py-2 text-center">
-                    <p className="text-xs text-gray-500">Durată</p>
-                    <p className="font-semibold text-gray-800">{cls.duration}</p>
-                  </div>
-                  <div className="bg-stone-50 rounded-xl px-4 py-2 text-center">
-                    <p className="text-xs text-gray-500">Grup</p>
-                    <p className="font-semibold text-gray-800">{cls.participants}</p>
-                  </div>
-                  <div className="bg-rose-50 rounded-xl px-4 py-2 text-center">
-                    <p className="text-xs text-rose-600">Preț per ședință</p>
-                    <p className="font-bold text-rose-700">{cls.price}</p>
-                  </div>
-                  <div className="bg-rose-50 rounded-xl px-4 py-2 text-center">
-                    <p className="text-xs text-rose-600">Abonament</p>
-                    <p className="font-bold text-rose-700">{cls.abonament}</p>
-                  </div>
+      {/* CLASE ÎN AER LIBER */}
+      <section className="py-20 bg-stone-50" id="aer-liber">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
+            <div>
+              <p className="text-caramel text-sm font-medium tracking-widest uppercase mb-3">Outside Activity</p>
+              <h2 className="text-3xl font-serif font-bold text-gray-900 mb-4">Clase în Aer Liber</h2>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Când vremea o permite, ieșim din studio și ducem practica Pilates în natură. Clasele noastre în aer
+                liber combină exercițiile clasice de Mat Pilates cu aerul curat și energia naturii, pentru o
+                experiență completă de mișcare și relaxare.
+              </p>
+              <p className="text-gray-600 leading-relaxed mb-6">
+                Sesiunile au loc în parcurile din Cluj-Napoca și în locații speciale în împrejurimi, în funcție
+                de sezon. Grupele sunt mici (max. 8 persoane) pentru o atmosferă intimă și personalizată.
+              </p>
+
+              <div className="flex flex-wrap gap-4 mb-6">
+                <div className="bg-white rounded-xl px-4 py-2 text-center shadow-sm">
+                  <p className="text-xs text-gray-500">Durată</p>
+                  <p className="font-semibold text-gray-800">75 min</p>
                 </div>
-
-                <h4 className="font-semibold text-gray-800 mb-3">Beneficii:</h4>
-                <ul className="space-y-2">
-                  {cls.benefits.map((b) => (
-                    <li key={b} className="flex items-start gap-2 text-sm text-gray-600">
-                      <svg className="w-4 h-4 text-rose-500 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                      </svg>
-                      {b}
-                    </li>
-                  ))}
-                </ul>
-
-                <Link
-                  href="/contact"
-                  className="mt-6 inline-block bg-rose-700 text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-rose-800 transition-colors"
-                >
-                  Rezervă o ședință
-                </Link>
+                <div className="bg-white rounded-xl px-4 py-2 text-center shadow-sm">
+                  <p className="text-xs text-gray-500">Grup</p>
+                  <p className="font-semibold text-gray-800">max. 8</p>
+                </div>
+                <div className="bg-cream rounded-xl px-4 py-2 text-center">
+                  <p className="text-xs text-caramel">Preț</p>
+                  <p className="font-bold text-bark">60 RON / ședință</p>
+                </div>
               </div>
 
-              <div className={idx % 2 === 1 ? 'md:order-1' : ''}>
-                {/* Orar */}
-                <div className="bg-stone-50 rounded-2xl p-6">
-                  <h4 className="font-serif font-bold text-gray-900 mb-4">📅 Orar Săptămânal</h4>
-                  <div className="space-y-2">
-                    {cls.schedule.map((s, i) => (
-                      <div key={i} className="flex justify-between items-center py-2 border-b border-stone-200 last:border-0">
-                        <span className="font-medium text-gray-700 text-sm">{s.day}</span>
-                        <span className="text-rose-700 font-semibold text-sm">{s.time}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <p className="text-xs text-gray-400 mt-4">
-                    * Orarul poate varia. Verificați disponibilitatea la contact.
-                  </p>
-                </div>
-
-                {/* Placeholder imagine */}
-                <div className="mt-4 rounded-2xl bg-rose-100 aspect-video flex items-center justify-center">
-                  <div className="text-center text-rose-300 p-4">
-                    <svg className="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              <ul className="space-y-2 mb-6">
+                {[
+                  'Pilates mat în parc sau în natură',
+                  'Exerciții de mobilitate și stretching',
+                  'Respirație și mindfulness în aer liber',
+                  'Disponibil primăvară – toamnă',
+                  'Saltele și accesorii puse la dispoziție',
+                ].map((b) => (
+                  <li key={b} className="flex items-start gap-2 text-sm text-gray-600">
+                    <svg className="w-4 h-4 text-caramel mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                     </svg>
-                    <p className="text-xs">Fotografie clasă {cls.title}</p>
-                  </div>
+                    {b}
+                  </li>
+                ))}
+              </ul>
+
+              <Link
+                href="/contact"
+                className="inline-block bg-bark text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-espresso transition-colors"
+              >
+                Rezervă o ședință în aer liber
+              </Link>
+            </div>
+
+            {/* Grid 4 poze outdoor */}
+            <div className="grid grid-cols-2 gap-3">
+              {['outsideactivity1.jpg', 'outsideactivity2.jpg', 'outsideactivity3.jpg', 'outsideactivity4.jpg'].map((img, i) => (
+                <div key={i} className="rounded-2xl overflow-hidden aspect-square">
+                  <img
+                    src={`/images/${img}`}
+                    alt={`Clasă în aer liber ${i + 1}`}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SAUNĂ */}
+      <section className="py-20 bg-white" id="sauna">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Grid 2 poze saună */}
+            <div className="grid grid-cols-2 gap-3">
+              <div className="rounded-2xl overflow-hidden aspect-square col-span-2">
+                <img
+                  src="/images/sauna.jpg"
+                  alt="Sauna Body Studio Pilates"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="rounded-2xl overflow-hidden aspect-video col-span-2">
+                <img
+                  src="/images/sauna2.jpg"
+                  alt="Sauna Body Studio Pilates interior"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
-          ))}
+
+            <div>
+              <p className="text-caramel text-sm font-medium tracking-widest uppercase mb-3">Relaxare & Recuperare</p>
+              <h2 className="text-3xl font-serif font-bold text-gray-900 mb-4">Saună</h2>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                La Body Studio Pilates, experiența nu se oprește la finalul clasei. Studioul nostru dispune de
+                o saună finlandeză modernă, disponibilă clienților noștri pentru relaxare și recuperare musculară
+                după antrenament.
+              </p>
+              <p className="text-gray-600 leading-relaxed mb-6">
+                Căldura sauni accelerează eliminarea toxinelor, relaxează mușchii tensionați și îmbunătățește
+                circulația sanguină — beneficii ideale după o ședință intensă de Pilates sau Reformer.
+              </p>
+
+              <div className="flex flex-wrap gap-4 mb-6">
+                <div className="bg-stone-50 rounded-xl px-4 py-2 text-center">
+                  <p className="text-xs text-gray-500">Capacitate</p>
+                  <p className="font-semibold text-gray-800">4 persoane</p>
+                </div>
+                <div className="bg-stone-50 rounded-xl px-4 py-2 text-center">
+                  <p className="text-xs text-gray-500">Temperatură</p>
+                  <p className="font-semibold text-gray-800">80–90°C</p>
+                </div>
+                <div className="bg-cream rounded-xl px-4 py-2 text-center">
+                  <p className="text-xs text-caramel">Preț</p>
+                  <p className="font-bold text-bark">30 RON / 30 min</p>
+                </div>
+              </div>
+
+              <ul className="space-y-2 mb-6">
+                {[
+                  'Saună finlandeză cu lemn de pin',
+                  'Relaxare musculară profundă post-antrenament',
+                  'Detoxifiere și îmbunătățirea circulației',
+                  'Rezervare inclusă cu abonamentul premium',
+                  'Prosop și papuci de unică folosință incluse',
+                ].map((b) => (
+                  <li key={b} className="flex items-start gap-2 text-sm text-gray-600">
+                    <svg className="w-4 h-4 text-caramel mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                    </svg>
+                    {b}
+                  </li>
+                ))}
+              </ul>
+
+              <Link
+                href="/contact"
+                className="inline-block bg-bark text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-espresso transition-colors"
+              >
+                Rezervă sauna
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-rose-700 text-white text-center">
+      <section className="py-16 bg-bark text-white text-center">
         <div className="max-w-2xl mx-auto px-4">
           <h2 className="text-2xl font-serif font-bold mb-4">Prima ședință gratuită!</h2>
-          <p className="text-rose-100 mb-8">
+          <p className="text-beige mb-8">
             Vino la o ședință de probă gratuită și descoperă care clasă ți se potrivește cel mai bine.
             Fără angajamente, fără presiuni.
           </p>
           <Link
             href="/contact"
-            className="bg-white text-rose-700 px-8 py-3 rounded-full font-bold hover:bg-rose-50 transition-colors inline-block"
+            className="bg-white text-bark px-8 py-3 rounded-full font-bold hover:bg-cream transition-colors inline-block"
           >
             Rezervă acum gratuit
           </Link>

@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState } from 'react'
 import StarRating from '../_components/StarRating'
@@ -50,9 +50,9 @@ export default function SatisfactiePage() {
   return (
     <>
       {/* HERO */}
-      <section className="bg-rose-50 py-20">
+      <section className="bg-cream py-20">
         <div className="max-w-3xl mx-auto px-4 text-center">
-          <p className="text-rose-600 text-sm font-medium tracking-widest uppercase mb-3">Opinia ta contează</p>
+          <p className="text-caramel text-sm font-medium tracking-widest uppercase mb-3">Opinia ta contează</p>
           <h1 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-6">
             Chestionar de Satisfacție
           </h1>
@@ -73,9 +73,9 @@ export default function SatisfactiePage() {
                 Feedback-ul tău a fost înregistrat. Îl vom folosi pentru a ne îmbunătăți continuu.
               </p>
 
-              <div className="bg-rose-50 rounded-2xl p-6 mb-8 inline-block">
+              <div className="bg-cream rounded-2xl p-6 mb-8 inline-block">
                 <p className="text-sm text-gray-500 mb-1">Scor general</p>
-                <p className="text-5xl font-serif font-bold text-rose-700">{average}</p>
+                <p className="text-5xl font-serif font-bold text-bark">{average}</p>
                 <div className="flex justify-center gap-1 mt-2">
                   {[1, 2, 3, 4, 5].map((s) => (
                     <span key={s} className={parseFloat(average) >= s ? 'text-amber-400 text-2xl' : 'text-gray-200 text-2xl'}>★</span>
@@ -104,7 +104,7 @@ export default function SatisfactiePage() {
                   setRecomandat(null)
                   setComentariu('')
                 }}
-                className="text-rose-700 font-medium hover:text-rose-900 text-sm"
+                className="text-bark font-medium hover:text-espresso text-sm"
               >
                 ← Completează din nou
               </button>
@@ -112,7 +112,7 @@ export default function SatisfactiePage() {
           ) : (
             <form onSubmit={handleSubmit}>
               {/* INDICATII */}
-              <div className="bg-rose-50 rounded-2xl p-5 mb-8 flex items-start gap-3">
+              <div className="bg-cream rounded-2xl p-5 mb-8 flex items-start gap-3">
                 <span className="text-2xl">💡</span>
                 <p className="text-sm text-gray-600">
                   Acordă câte 1–5 stele pentru fiecare criteriu. <strong>1 stea</strong> = nesatisfăcător,{' '}
@@ -125,7 +125,7 @@ export default function SatisfactiePage() {
                 {questions.map((q, idx) => (
                   <div key={q.id} className="border border-stone-200 rounded-2xl p-6">
                     <div className="flex items-start gap-3 mb-4">
-                      <span className="bg-rose-100 text-rose-700 w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0">
+                      <span className="bg-beige text-bark w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0">
                         {idx + 1}
                       </span>
                       <div>
@@ -154,8 +154,8 @@ export default function SatisfactiePage() {
                       onClick={() => setRecomandat(opt)}
                       className={`px-4 py-2 rounded-full text-sm font-medium border transition-colors ${
                         recomandat === opt
-                          ? 'bg-rose-700 text-white border-rose-700'
-                          : 'border-stone-200 text-gray-600 hover:border-rose-300'
+                          ? 'bg-bark text-white border-bark'
+                          : 'border-stone-200 text-gray-600 hover:border-mink'
                       }`}
                     >
                       {opt}
@@ -174,7 +174,7 @@ export default function SatisfactiePage() {
                   onChange={(e) => setComentariu(e.target.value)}
                   rows={4}
                   placeholder="Spune-ne ce ai aprecia dacă am îmbunătăți sau ce ți-a plăcut în mod special..."
-                  className="w-full border border-stone-200 rounded-xl px-4 py-3 text-sm outline-none focus:border-rose-400 focus:ring-1 focus:ring-rose-400 transition resize-none"
+                  className="w-full border border-stone-200 rounded-xl px-4 py-3 text-sm outline-none focus:border-mink focus:ring-1 focus:ring-mink transition resize-none"
                 />
               </div>
 
@@ -186,7 +186,7 @@ export default function SatisfactiePage() {
                 </div>
                 <div className="w-full bg-stone-100 rounded-full h-2">
                   <div
-                    className="bg-rose-500 h-2 rounded-full transition-all"
+                    className="bg-caramel h-2 rounded-full transition-all"
                     style={{ width: `${(totalFilled / questions.length) * 100}%` }}
                   />
                 </div>
@@ -197,7 +197,7 @@ export default function SatisfactiePage() {
                 disabled={totalFilled < questions.length}
                 className={`w-full py-4 rounded-xl font-bold text-lg transition-colors ${
                   totalFilled === questions.length
-                    ? 'bg-rose-700 text-white hover:bg-rose-800 cursor-pointer'
+                    ? 'bg-bark text-white hover:bg-espresso cursor-pointer'
                     : 'bg-stone-100 text-stone-400 cursor-not-allowed'
                 }`}
               >

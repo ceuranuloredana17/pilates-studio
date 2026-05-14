@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState } from 'react'
 import Link from 'next/link'
@@ -17,10 +17,10 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50 border-b border-rose-100">
+    <header className="bg-white shadow-sm sticky top-0 z-50 border-b border-beige">
       <nav className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
         <Link href="/" className="flex flex-col leading-tight">
-          <span className="text-xl font-serif font-bold text-rose-700">Body Studio</span>
+          <span className="text-xl font-serif font-bold text-bark">Body Studio</span>
           <span className="text-xs tracking-widest text-gray-500 uppercase">Pilates</span>
         </Link>
 
@@ -30,7 +30,7 @@ export default function Navbar() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="text-gray-600 hover:text-rose-700 transition-colors text-sm font-medium"
+                className="text-gray-600 hover:text-bark transition-colors text-sm font-medium"
               >
                 {link.label}
               </Link>
@@ -41,7 +41,7 @@ export default function Navbar() {
         {/* Rezervă btn */}
         <Link
           href="/contact"
-          className="hidden md:inline-flex items-center bg-rose-700 text-white text-sm font-medium px-4 py-2 rounded-full hover:bg-rose-800 transition-colors"
+          className="hidden md:inline-flex items-center bg-bark text-white text-sm font-medium px-4 py-2 rounded-full hover:bg-espresso transition-colors"
         >
           Rezervă o ședință
         </Link>
@@ -60,13 +60,13 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-white border-t border-rose-100 px-4 pb-4">
+        <div className="md:hidden bg-white border-t border-beige px-4 pb-4">
           <ul className="flex flex-col gap-3 mt-3">
             {links.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="block text-gray-700 hover:text-rose-700 py-1 border-b border-gray-100"
+                  className="block text-gray-700 hover:text-bark py-1 border-b border-gray-100"
                   onClick={() => setOpen(false)}
                 >
                   {link.label}
@@ -76,7 +76,7 @@ export default function Navbar() {
           </ul>
           <Link
             href="/contact"
-            className="mt-4 inline-block bg-rose-700 text-white text-sm px-5 py-2 rounded-full"
+            className="mt-4 inline-block bg-bark text-white text-sm px-5 py-2 rounded-full"
             onClick={() => setOpen(false)}
           >
             Rezervă o ședință

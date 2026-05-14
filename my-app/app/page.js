@@ -1,4 +1,4 @@
-import Link from 'next/link'
+﻿import Link from 'next/link'
 import { getPosts } from './_lib/posts'
 
 export default function HomePage() {
@@ -7,13 +7,13 @@ export default function HomePage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative bg-gradient-to-br from-rose-50 via-stone-50 to-rose-100 min-h-[90vh] flex items-center">
+      <section className="relative bg-gradient-to-br from-cream via-stone-50 to-beige min-h-[90vh] flex items-center">
         <div className="max-w-6xl mx-auto px-4 py-24 grid md:grid-cols-2 gap-12 items-center w-full">
           <div>
-            <p className="text-rose-600 text-sm font-medium tracking-widest uppercase mb-4">Studio de Pilates · Cluj-Napoca</p>
+            <p className="text-caramel text-sm font-medium tracking-widest uppercase mb-4">Studio de Pilates · Cluj-Napoca</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gray-900 leading-tight mb-6">
               Descoperă Echilibrul<br />
-              <span className="text-rose-700">Prin Pilates</span>
+              <span className="text-bark">Prin Pilates</span>
             </h1>
             <p className="text-lg text-gray-600 mb-8 max-w-lg leading-relaxed">
               Clase personalizate de Mat Pilates și Reformer Pilates pentru toate nivelurile.
@@ -22,28 +22,28 @@ export default function HomePage() {
             <div className="flex flex-wrap gap-4">
               <Link
                 href="/clase"
-                className="bg-rose-700 text-white px-8 py-3 rounded-full font-medium hover:bg-rose-800 transition-colors"
+                className="bg-bark text-white px-8 py-3 rounded-full font-medium hover:bg-espresso transition-colors"
               >
                 Clasele Noastre
               </Link>
               <Link
                 href="/contact"
-                className="border-2 border-rose-700 text-rose-700 px-8 py-3 rounded-full font-medium hover:bg-rose-50 transition-colors"
+                className="border-2 border-bark text-bark px-8 py-3 rounded-full font-medium hover:bg-cream transition-colors"
               >
                 Rezervă Gratuit
               </Link>
             </div>
             <div className="flex gap-8 mt-12">
               <div>
-                <p className="text-3xl font-serif font-bold text-rose-700">500+</p>
+                <p className="text-3xl font-serif font-bold text-bark">500+</p>
                 <p className="text-sm text-gray-500">Clienți satisfăcuți</p>
               </div>
               <div>
-                <p className="text-3xl font-serif font-bold text-rose-700">8+</p>
+                <p className="text-3xl font-serif font-bold text-bark">8+</p>
                 <p className="text-sm text-gray-500">Ani de experiență</p>
               </div>
               <div>
-                <p className="text-3xl font-serif font-bold text-rose-700">4</p>
+                <p className="text-3xl font-serif font-bold text-bark">4</p>
                 <p className="text-sm text-gray-500">Tipuri de clase</p>
               </div>
             </div>
@@ -80,7 +80,7 @@ export default function HomePage() {
             />
           </div>
           <div>
-            <p className="text-rose-600 text-sm font-medium tracking-widest uppercase mb-3">Povestea noastră</p>
+            <p className="text-caramel text-sm font-medium tracking-widest uppercase mb-3">Povestea noastră</p>
             <h2 className="text-3xl font-serif font-bold text-gray-900 mb-4">De ce Body Studio Pilates?</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
               Body Studio Pilates s-a născut din pasiunea pentru mișcare conștientă și dorința de a aduce în Cluj-Napoca o experiență Pilates autentică. Cu instructori certificați internațional și echipamente de ultimă generație, creăm un spațiu sigur și inspirant pentru toți.
@@ -88,7 +88,7 @@ export default function HomePage() {
             <p className="text-gray-600 leading-relaxed mb-6">
               Filosofia noastră se bazează pe trei piloni: <strong>precizie</strong> în executarea mișcărilor, <strong>respirație</strong> controlată și <strong>conștientizare</strong> a propriului corp.
             </p>
-            <Link href="/despre-noi" className="text-rose-700 font-medium hover:text-rose-900 inline-flex items-center gap-2">
+            <Link href="/despre-noi" className="text-bark font-medium hover:text-espresso inline-flex items-center gap-2">
               Află mai multe despre noi
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
             </Link>
@@ -100,7 +100,7 @@ export default function HomePage() {
       <section className="py-20 bg-stone-50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <p className="text-rose-600 text-sm font-medium tracking-widest uppercase mb-3">Oferta noastră</p>
+            <p className="text-caramel text-sm font-medium tracking-widest uppercase mb-3">Oferta noastră</p>
             <h2 className="text-3xl font-serif font-bold text-gray-900">Tipuri de Clase</h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -118,30 +118,30 @@ export default function HomePage() {
                 level: 'Începători – Avansat',
               },
               {
-                icon: '🤰',
-                title: 'Pilates Prenatal',
-                desc: 'Program special adaptat pentru gravidele care doresc să mențină tonusul muscular în siguranță.',
-                level: 'Gravide',
+                icon: '🌿',
+                title: 'Clase în Aer Liber',
+                desc: 'Pilates și fitness în natură. Sesiuni în aer liber pentru energie și stare de bine.',
+                level: 'Toate nivelurile',
               },
               {
-                icon: '🌿',
-                title: 'Pilates Seniori',
-                desc: 'Mișcare blândă, echilibru și flexibilitate pentru persoanele de 60+ ani.',
-                level: 'Seniori',
+                icon: '🔥',
+                title: 'Saună',
+                desc: 'Relaxare și recuperare musculară în sauna noastră finlandeză, disponibilă după antrenament.',
+                level: 'Toți clienții',
               },
             ].map((cls) => (
-              <div key={cls.title} className="bg-white rounded-2xl p-6 shadow-sm border border-rose-100 hover:shadow-md transition-shadow">
+              <div key={cls.title} className="bg-white rounded-2xl p-6 shadow-sm border border-beige hover:shadow-md transition-shadow">
                 <div className="text-4xl mb-4">{cls.icon}</div>
                 <h3 className="text-lg font-serif font-bold text-gray-900 mb-2">{cls.title}</h3>
                 <p className="text-sm text-gray-600 mb-4 leading-relaxed">{cls.desc}</p>
-                <span className="inline-block text-xs bg-rose-50 text-rose-700 px-3 py-1 rounded-full">
+                <span className="inline-block text-xs bg-cream text-bark px-3 py-1 rounded-full">
                   {cls.level}
                 </span>
               </div>
             ))}
           </div>
           <div className="text-center mt-8">
-            <Link href="/clase" className="bg-rose-700 text-white px-8 py-3 rounded-full font-medium hover:bg-rose-800 transition-colors inline-block">
+            <Link href="/clase" className="bg-bark text-white px-8 py-3 rounded-full font-medium hover:bg-espresso transition-colors inline-block">
               Vezi toate clasele și prețurile
             </Link>
           </div>
@@ -152,7 +152,7 @@ export default function HomePage() {
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-10">
-            <p className="text-rose-600 text-sm font-medium tracking-widest uppercase mb-3">Vezi cum lucrăm</p>
+            <p className="text-caramel text-sm font-medium tracking-widest uppercase mb-3">Vezi cum lucrăm</p>
             <h2 className="text-3xl font-serif font-bold text-gray-900">Pilates în Acțiune</h2>
           </div>
           <div className="aspect-video w-full max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-xl">
@@ -171,9 +171,9 @@ export default function HomePage() {
       </section>
 
       {/* AUDIO */}
-      <section className="py-16 bg-rose-50">
+      <section className="py-16 bg-cream">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <p className="text-rose-600 text-sm font-medium tracking-widest uppercase mb-3">Atmosfera studioului</p>
+          <p className="text-caramel text-sm font-medium tracking-widest uppercase mb-3">Atmosfera studioului</p>
           <h2 className="text-2xl font-serif font-bold text-gray-900 mb-4">Muzica Ambientală</h2>
           <p className="text-gray-600 mb-8">
             La Body Studio Pilates, creăm un mediu relaxant cu muzică special selectată pentru practica Pilates.
@@ -226,21 +226,21 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex items-center justify-between mb-10">
             <div>
-              <p className="text-rose-600 text-sm font-medium tracking-widest uppercase mb-2">Sfaturi și noutăți</p>
+              <p className="text-caramel text-sm font-medium tracking-widest uppercase mb-2">Sfaturi și noutăți</p>
               <h2 className="text-3xl font-serif font-bold text-gray-900">Ultimele Articole</h2>
             </div>
-            <Link href="/blog" className="text-rose-700 font-medium hover:text-rose-900 text-sm hidden md:block">
+            <Link href="/blog" className="text-bark font-medium hover:text-espresso text-sm hidden md:block">
               Vezi toate →
             </Link>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {latestPosts.map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
-                <div className="bg-rose-50 rounded-xl aspect-video mb-4 flex items-center justify-center">
-                  <span className="text-rose-300 text-sm">{post.category}</span>
+                <div className="rounded-xl aspect-video mb-4 overflow-hidden">
+                  <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
-                <span className="text-xs text-rose-600 font-medium">{post.category}</span>
-                <h3 className="font-serif font-bold text-gray-900 mt-1 mb-2 group-hover:text-rose-700 transition-colors">
+                <span className="text-xs text-caramel font-medium">{post.category}</span>
+                <h3 className="font-serif font-bold text-gray-900 mt-1 mb-2 group-hover:text-bark transition-colors">
                   {post.title}
                 </h3>
                 <p className="text-sm text-gray-500 line-clamp-2">{post.excerpt}</p>
@@ -249,7 +249,7 @@ export default function HomePage() {
             ))}
           </div>
           <div className="text-center mt-8 md:hidden">
-            <Link href="/blog" className="text-rose-700 font-medium">
+            <Link href="/blog" className="text-bark font-medium">
               Vezi toate articolele →
             </Link>
           </div>
@@ -257,16 +257,16 @@ export default function HomePage() {
       </section>
 
       {/* QUESTIONNAIRE CTA */}
-      <section className="py-16 bg-rose-700 text-white">
+      <section className="py-16 bg-bark text-white">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-2xl font-serif font-bold mb-4">Cum ne evaluezi?</h2>
-          <p className="text-rose-100 mb-8">
+          <p className="text-beige mb-8">
             Părerile tale contează. Acordă-ne 2 minute pentru a completa chestionarul de satisfacție
             și ajută-ne să îmbunătățim serviciile noastre.
           </p>
           <Link
             href="/satisfactie"
-            className="bg-white text-rose-700 px-8 py-3 rounded-full font-bold hover:bg-rose-50 transition-colors inline-block"
+            className="bg-white text-bark px-8 py-3 rounded-full font-bold hover:bg-cream transition-colors inline-block"
           >
             Completează chestionarul ★★★★★
           </Link>

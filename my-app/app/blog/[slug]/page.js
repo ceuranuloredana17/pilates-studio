@@ -1,4 +1,4 @@
-import Link from 'next/link'
+﻿import Link from 'next/link'
 import { getPosts, getPostBySlug } from '../../_lib/posts'
 import { notFound } from 'next/navigation'
 
@@ -36,9 +36,9 @@ export default async function BlogPostPage({ params }) {
   return (
     <>
       {/* HERO */}
-      <section className="bg-rose-50 py-16">
+      <section className="bg-cream py-16">
         <div className="max-w-3xl mx-auto px-4">
-          <Link href="/blog" className="text-rose-600 text-sm hover:text-rose-800 inline-flex items-center gap-1 mb-6">
+          <Link href="/blog" className="text-caramel text-sm hover:text-espresso inline-flex items-center gap-1 mb-6">
             ← Înapoi la Blog
           </Link>
           <span className={`text-xs font-medium px-3 py-1 rounded-full ${categoryColors[post.category] || 'bg-gray-100 text-gray-600'}`}>
@@ -56,14 +56,12 @@ export default async function BlogPostPage({ params }) {
 
       {/* IMAGINE ARTICOL */}
       <div className="max-w-3xl mx-auto px-4 -mt-4 mb-12">
-        <div className="rounded-2xl bg-rose-100 aspect-video flex items-center justify-center">
-          {/* Înlocuiți cu: <img src={post.image} alt={post.title} className="w-full h-full object-cover rounded-2xl" /> */}
-          <div className="text-center text-rose-300">
-            <svg className="w-16 h-16 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
-            <p className="text-sm">Fotografie articol</p>
-          </div>
+        <div className="rounded-2xl aspect-video overflow-hidden">
+          <img
+            src={post.image}
+            alt={post.title}
+            className="w-full h-full object-cover"
+          />
         </div>
       </div>
 
@@ -85,7 +83,7 @@ export default async function BlogPostPage({ params }) {
             if (trimmed.startsWith('- ')) {
               return (
                 <li key={idx} className="flex items-start gap-2 text-gray-700 mb-2">
-                  <svg className="w-4 h-4 text-rose-500 mt-1 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-4 h-4 text-caramel mt-1 shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                   </svg>
                   <span>{trimmed.slice(2)}</span>
@@ -95,14 +93,14 @@ export default async function BlogPostPage({ params }) {
 
             if (/^\d+\./.test(trimmed)) {
               return (
-                <p key={idx} className="text-gray-700 mb-2 pl-2 border-l-2 border-rose-200">
+                <p key={idx} className="text-gray-700 mb-2 pl-2 border-l-2 border-sand">
                   {trimmed}
                 </p>
               )
             }
 
             if (trimmed.startsWith('---')) {
-              return <hr key={idx} className="border-rose-100 my-6" />
+              return <hr key={idx} className="border-beige my-6" />
             }
 
             if (trimmed.startsWith('*') && trimmed.endsWith('*')) {
@@ -145,14 +143,14 @@ export default async function BlogPostPage({ params }) {
         </div>
 
         {/* CTA */}
-        <div className="mt-10 bg-rose-50 rounded-2xl p-6 text-center">
+        <div className="mt-10 bg-cream rounded-2xl p-6 text-center">
           <h3 className="font-serif font-bold text-gray-900 text-xl mb-2">Vrei să practici Pilates?</h3>
           <p className="text-gray-600 text-sm mb-4">
             Vino la Body Studio Pilates și descoperă beneficiile Pilates-ului alături de instructori certificați.
           </p>
           <Link
             href="/contact"
-            className="bg-rose-700 text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-rose-800 transition-colors inline-block"
+            className="bg-bark text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-espresso transition-colors inline-block"
           >
             Rezervă o ședință gratuită
           </Link>
@@ -167,11 +165,11 @@ export default async function BlogPostPage({ params }) {
             <div className="grid md:grid-cols-3 gap-6">
               {otherPosts.map((p) => (
                 <Link key={p.slug} href={`/blog/${p.slug}`} className="group">
-                  <div className="bg-rose-50 rounded-xl aspect-video mb-3 flex items-center justify-center">
-                    <span className="text-rose-300 text-xs">{p.category}</span>
+                  <div className="bg-cream rounded-xl aspect-video mb-3 flex items-center justify-center">
+                    <span className="text-mink text-xs">{p.category}</span>
                   </div>
-                  <span className="text-xs text-rose-600">{p.category}</span>
-                  <h3 className="font-serif font-bold text-gray-900 mt-1 group-hover:text-rose-700 transition-colors">
+                  <span className="text-xs text-caramel">{p.category}</span>
+                  <h3 className="font-serif font-bold text-gray-900 mt-1 group-hover:text-bark transition-colors">
                     {p.title}
                   </h3>
                   <p className="text-xs text-gray-400 mt-1">{p.date}</p>
