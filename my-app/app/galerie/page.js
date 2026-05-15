@@ -151,7 +151,7 @@ export default function GaleriePage() {
             Descoperă exerciții, sfaturi și momentele din spatele camerelor pe contul nostru de Instagram.
           </p>
           <a
-            href="https://instagram.com/bodystudiopilates"
+            href="https://www.instagram.com/thebody_pilates.studio?igsh=MXJwczVyOHRpbGNpNw%3D%3D&utm_source=qr"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-gradient-to-br from-purple-600 to-pink-500 text-white px-8 py-3 rounded-full font-medium hover:opacity-90 transition-opacity"

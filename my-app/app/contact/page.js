@@ -112,8 +112,8 @@ export default function ContactPage() {
               <p className="font-semibold text-gray-800 mb-4">Urmărește-ne</p>
               <div className="flex gap-3 flex-wrap">
                 {[
-                  { name: 'Facebook', href: 'https://facebook.com/bodystudiopilates', color: 'bg-blue-600' },
-                  { name: 'Instagram', href: 'https://instagram.com/bodystudiopilates', color: 'bg-pink-600' },
+                  { name: 'Facebook', href: 'https://www.facebook.com/share/1a7Sr4kLHR/?mibextid=wwXIfr', color: 'bg-blue-600' },
+                  { name: 'Instagram', href: 'https://www.instagram.com/thebody_pilates.studio?igsh=MXJwczVyOHRpbGNpNw%3D%3D&utm_source=qr', color: 'bg-pink-600' },
                   { name: 'YouTube', href: 'https://youtube.com/@bodystudiopilates', color: 'bg-red-600' },
                   { name: 'TikTok', href: 'https://tiktok.com/@bodystudiopilates', color: 'bg-gray-800' },
                 ].map((s) => (

@@ -201,8 +201,8 @@ export default function HomePage() {
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { name: 'Facebook', href: 'https://facebook.com/bodystudiopilates', color: 'bg-blue-600 hover:bg-blue-700', icon: 'f' },
-              { name: 'Instagram', href: 'https://instagram.com/bodystudiopilates', color: 'bg-gradient-to-br from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600', icon: '📷' },
+              { name: 'Facebook', href: 'https://www.facebook.com/share/1a7Sr4kLHR/?mibextid=wwXIfr', color: 'bg-blue-600 hover:bg-blue-700', icon: 'f' },
+              { name: 'Instagram', href: 'https://www.instagram.com/thebody_pilates.studio?igsh=MXJwczVyOHRpbGNpNw%3D%3D&utm_source=qr', color: 'bg-gradient-to-br from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600', icon: '📷' },
               { name: 'YouTube', href: 'https://youtube.com/@bodystudiopilates', color: 'bg-red-600 hover:bg-red-700', icon: '▶' },
               { name: 'TikTok', href: 'https://tiktok.com/@bodystudiopilates', color: 'bg-gray-800 hover:bg-black', icon: '♪' },
             ].map((social) => (

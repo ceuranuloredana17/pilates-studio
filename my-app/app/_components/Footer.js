@@ -16,7 +16,7 @@ export default function Footer() {
             <p className="text-xs uppercase tracking-widest text-gray-500 mb-1">Urmărește-ne</p>
             <div className="flex gap-4 flex-wrap">
               <a
-                href="https://facebook.com/bodystudiopilates"
+                href="https://www.facebook.com/share/1a7Sr4kLHR/?mibextid=wwXIfr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm hover:text-mink transition-colors flex items-center gap-1"
@@ -25,7 +25,7 @@ export default function Footer() {
                 Facebook
               </a>
               <a
-                href="https://instagram.com/bodystudiopilates"
+                href="https://www.instagram.com/thebody_pilates.studio?igsh=MXJwczVyOHRpbGNpNw%3D%3D&utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm hover:text-mink transition-colors flex items-center gap-1"
